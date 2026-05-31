@@ -3,6 +3,7 @@ import express from 'express'
 const app = express()
 const port = Number(process.env.PORT || 3000)
 const revision = process.env.GITHUB_SHA || process.env.VOS_GIT_COMMIT_SHA || 'local'
+const proofRun = 'preview-2026-05-31T06:26:01Z'
 
 app.get('/healthz', (_request, response) => {
   response.type('text/plain').send('ok')
@@ -29,7 +30,7 @@ app.use((_request, response) => {
   <body>
     <main>
       <h1>VOS deploy is live</h1>
-      <p>Built from GitHub source archive and served by the VOS runtime. Revision <code>${revision}</code>.</p>
+      <p>Built from GitHub source archive and served by the VOS runtime. Revision <code>${revision}</code>. Proof run <code>${proofRun}</code>.</p>
     </main>
   </body>
 </html>`)
