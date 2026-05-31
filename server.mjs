@@ -3,7 +3,7 @@ import express from 'express'
 const app = express()
 const port = Number(process.env.PORT || 3000)
 const revision = process.env.GITHUB_SHA || process.env.VOS_GIT_COMMIT_SHA || 'local'
-const proofRun = 'preview-2026-05-31T07:04:17Z'
+const proofRun = 'preview-2026-05-31T07:12:46Z'
 
 app.get('/healthz', (_request, response) => {
   response.type('text/plain').send('ok')
