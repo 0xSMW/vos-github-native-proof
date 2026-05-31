@@ -6,3 +6,5 @@ Production proof revision: 2026-05-31 post-healthcheck-fix.
 
 Production proof root-domain revision: 2026-05-31 dash-sslip.
 Preview proof revision: 2026-05-31 post-healthcheck-fix.
+
+Preview proof root-domain revision: 2026-05-31 dash-sslip.
