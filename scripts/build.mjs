@@ -1,6 +1,7 @@
 import { mkdirSync, writeFileSync } from 'node:fs'
 
 const revision = process.env.GITHUB_SHA || process.env.VOS_GIT_COMMIT_SHA || 'local'
+const environment = process.env.VOS_ENV || process.env.VERCEL_ENV || 'preview'
 
 mkdirSync('dist', { recursive: true })
 writeFileSync(
@@ -23,7 +24,7 @@ writeFileSync(
   <body>
     <main>
       <h1>VOS deploy is live</h1>
-      <p>Built from GitHub source archive and served by the VOS runtime. Revision <code>${revision}</code>.</p>
+      <p>Built from GitHub source archive and served by the VOS runtime. Environment <code>${environment}</code>, revision <code>${revision}</code>.</p>
     </main>
   </body>
 </html>
